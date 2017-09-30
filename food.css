@@ -1,0 +1,44 @@
+body{ 
+	background: url(background.jpg) ; 
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: top center;
+	background-attachment: fixed;
+  }
+
+ .img-wrapper{
+	height:120px;
+	z-index:0;
+	display: block;
+    margin: 0 auto;
+}
+
+.header{
+	background: url(banner.png);
+	padding-top:40px;
+	padding-bottom:40px;
+	
+}
+
+#nav ul{
+	background: url(navback.jpg);
+	border: 1px solid #000000;
+}
+
+#nav ul li{
+	display: block; 
+	padding-left:44px;
+	padding-right:44px;
+
+	border-top:1px solid #000000;
+	border-left:1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom:1px solid #000000;
+	
+}
+#nav ul li a{
+	color:#000000;
+	text-decoration:none;
+}
