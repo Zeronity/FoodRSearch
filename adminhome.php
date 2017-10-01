@@ -23,13 +23,17 @@
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
 			<div class="row">
-				<div class="col-lg-1 col-md-1 col-xs-1">
-					<a href="registerform.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-user"></span>Register</button></p></a>
+				<div class="col-lg-2 col-md-2 col-xs-2">
+					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:150px"><span class="glyphicon glyphicon-tasks"></span> Report List</button></p></a>
 				</div>
-				<div class="col-lg-1 col-md-1 col-xs-1">
-					<a href="loginform.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-user"></span>Login</button></p></a>
+				<div class="col-lg-4 col-md-4 col-xs-4">
+					<a href="logout2.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:180px"><span class="glyphicon glyphicon-user"></span><?php     
+					session_start();
+					$name=$_SESSION['username'];     
+					echo'Logout ('. $name.')';
+					?></button></p></a>
 				</div>
-				<div class="col-lg-6 col-md-6 col-xs-4"></div>
+				<div class="col-lg-2 col-md-2 col-xs-2"></div>
 				<div class="col-lg-4 col-md-4 col-xs-4">
 					<form action ="#" method="post">
 						<p>
