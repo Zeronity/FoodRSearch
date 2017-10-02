@@ -10,7 +10,7 @@
 <body>
 		<div class="wrapper">
 			<div class="header">
-				<a href="homepage.html"><img src="foodbanner.png" class="img-responsive img-wrapper" alt="Responsive"></a>
+				<a href="homepage.php"><img src="foodbanner.png" class="img-responsive img-wrapper" alt="Responsive"></a>
 			</div>
 		</div>
 		<div class="container">
@@ -22,7 +22,7 @@
 			</div>
 			<div class="row">
 			<div class="col-lg-4 col-lg-offset-4 ">
-				<a href="homepage.html"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px">Yes</button></p></a>
+				<a href="homepage.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px">Yes</button></p></a>
 			</div>
 			<div class="col-lg-4 ">
 				<a href="userhome.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px">No</button></p></a>

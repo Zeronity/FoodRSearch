@@ -1,5 +1,5 @@
 body{ 
-	background: url(background.jpg) ; 
+	background: url(backgroundnew.jpg) ; 
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
@@ -45,4 +45,17 @@ body{
 
 .fotorama{
     padding-left: 115px;
+}
+
+.footer{
+	background: url(bg.main.png);
+	color:#ffffff ;
+	height:800px;
+}
+
+h2{
+	color: #ffffff;
+	padding:20px;
+	font-size:15px;
+	background: url(bg.main.png);
 }

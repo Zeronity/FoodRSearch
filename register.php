@@ -16,7 +16,7 @@ $fname=$_POST['fname'];
 $sql="INSERT INTO user(username, password, email, hp, address, fullname) VALUES ('$name', '$pwd', '$email', '$phone', '$address','$fname')";
 mysqli_query($con, $sql);
 		echo '<script type="text/javascript">alert("You have registered successfully, you may now login!");';
-		echo 'location.href="homepage.html";</script>';
+		echo 'location.href="homepage.php";</script>';
 		mysqli_close($con);
 }
 ?>
