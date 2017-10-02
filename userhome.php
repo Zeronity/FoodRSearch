@@ -24,7 +24,7 @@
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
 			<div class="row">
 				<div class="col-lg-1 col-md-1 col-xs-1">
-					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-upload"></span>Upload</button></p></a>
+					<a href="recipeform.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-upload"></span>Upload</button></p></a>
 				</div>
 				<div class="col-lg-1 col-md-1 col-xs-1">
 					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-tasks"></span>Recipes</button></p></a>
