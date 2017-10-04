@@ -17,7 +17,7 @@
 			<div id="nav">
 				<ul class="nav  nav-pills">
 					<li><a href="userhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="#"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="userrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="#"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
@@ -47,7 +47,7 @@
 				Video URL:<br/>
 				<input type="url" name="video" size = "40"><br><br>
 	
-				<input type="submit" name="create" value="create" style="height:30px;width:150px;font-size:14pt;"><br><br>
+				<input type="submit" name="upload" value="Upload" style="height:30px;width:150px;font-size:14pt;"><br><br>
 			</form>
 			<script>
 			function validate() {

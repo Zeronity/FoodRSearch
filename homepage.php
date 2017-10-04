@@ -17,7 +17,7 @@
 			<div id="nav">
 				<ul class="nav  nav-pills">
 					<li><a href="homepage.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="#"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="recipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="#"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>

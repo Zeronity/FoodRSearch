@@ -17,14 +17,14 @@
 			<div id="nav">
 				<ul class="nav  nav-pills">
 					<li><a href="adminhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="#"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="adminrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="#"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
 			<div class="row">
 				<div class="col-lg-2 col-md-2 col-xs-2">
-					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:150px"><span class="glyphicon glyphicon-tasks"></span> Report List</button></p></a>
+					<a href="viewreport.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:150px"><span class="glyphicon glyphicon-tasks"></span> Report List</button></p></a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-xs-4">
 					<a href="logout2.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:180px"><span class="glyphicon glyphicon-user"></span><?php     

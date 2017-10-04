@@ -17,7 +17,7 @@
 			<div id="nav">
 				<ul class="nav  nav-pills">
 					<li><a href="userhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="#"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="userrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="#"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
@@ -27,7 +27,7 @@
 					<a href="recipeform.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-upload"></span>Upload</button></p></a>
 				</div>
 				<div class="col-lg-1 col-md-1 col-xs-1">
-					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-tasks"></span>Recipes</button></p></a>
+					<a href="ownrecipe.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-tasks"></span>Recipes</button></p></a>
 				</div>
 				<div class="col-lg-1 col-md-1 col-xs-1">
 					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-list-alt"></span>Report</button></p></a>
