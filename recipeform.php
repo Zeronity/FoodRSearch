@@ -22,6 +22,8 @@
 				</ul>
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
+			<div class="row">
+			<div class="col-lg-6 col-md-6 col-xs-6">
 			<form name="myForm" action="upload.php" onsubmit="return validate()"; method="post">
 				Recipe Name:<br/>
 				<input type="text" name="rname" size = "40"><br><br>
@@ -49,12 +51,22 @@
 	
 				<input type="submit" name="upload" value="Upload" style="height:30px;width:150px;font-size:14pt;"><br><br>
 			</form>
+			</div>
+			<div class="col-lg-6 col-md-6 col-xs-6">
+			<div class="jumbotron">
+			<h2> How to Upload?</h2>
+			<p>1. Input recipe name. </p>
+			<p>2. Select a recipe type. </p>
+			<p>3. Write ingredient required for recipe.</p>
+			<p>4. Write a description to introudce this recipe</p>
+			<p>Optional to input youtube video url.</p>
+			</div>
+			</div>
+		</div>
 			<script>
 			function validate() {
 				var recipename=document["myForm"]["rname"].value;
 				var rtype=document["myForm"]["rtype"].value;
-				var ingredient=document["myForm"]["ingredient"].value;
-				var description=document["myForm"]["desc"].value;
 
     		if (recipename == null || recipename == "")
 			{
@@ -64,16 +76,6 @@
 			else if(rtype=="none")
 			{
 				alert("Please select a type for recipe!");
-				return false;
-			}
-			else if(ingredient == null || ingredient == "")
-			{
-				alert("Ingredient cannot be empty!");
-				return false;
-			}
-			else if (description== null || description == "")
-			{
-				alert("Description cannot be empty!");
 				return false;
 			}
 			}

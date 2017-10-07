@@ -47,10 +47,10 @@
 			function validate() {
 				var username=document["myForm"]["username"].value;
 				var pwd=document["myForm"]["pwd"].value;
-				var fname=document["myForm"]["fname"].value;
 				var email=document["myForm"]["email"].value;
 				var hp=document["myForm"]["hp"].value;
 				var address=document["myForm"]["address"].value;
+				var fname=document["myForm"]["fname"].value;
 
     		if (username == null || username == "")
 			{
@@ -67,16 +67,12 @@
 				alert("Password must be at least 8 of length!");
 				return false;
 			}
-			else if (fname== null || fname== "")
-			{
-				alert("Name cannot be empty!");
-				return false;
-			}
 			else if (/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test(email)==false) 
 			{
 				alert("Invalid Email Format!");
 				return false;
    			}
+			
     		else if (/^\d{3}[-]\d{7}$/.test(hp)==false) 
 			{
 				alert("Invalid Mobile Phone Format!");
@@ -85,6 +81,11 @@
      		else if (address == null || address == "") 
 	 		{
 				alert("Address cannot be empty!");
+				return false;
+			}
+			else if (fname== null || fname== "")
+			{
+				alert("Name cannot be empty!");
 				return false;
 			}
 			}
