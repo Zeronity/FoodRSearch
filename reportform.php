@@ -40,7 +40,9 @@
 				<input type="text" name="recipeName" class = "form-control"><br><br>
 
 				Description:<br/>
-				<input type="text" name="description" class = "form-control"><br><br>
+				<textarea rows="8" cols="35" name="desc">
+
+				</textarea>
 
 				<input type="submit" name="Submit" value="Submit" style="height:30px;width:150px;font-size:14pt;"><br><br>
 			</form>
@@ -64,7 +66,7 @@
 		alert("Recipe Name field cannot be empty!");
 		return false;
 	}
-	else if(description=="" || descritption ==null)
+	else if(description=="" || description==null)
 	{
 		alert("Description field cannot be empty!");
 		return false;
