@@ -25,22 +25,22 @@
 			<form name="myForm" action="register.php" onsubmit="return validate()"; method="post">
 				Username:<br/>
 				<input type="text" name="username" size = "40"><br><br>
-	
+
 				Password:<br/>
 				<input type="password" name="pwd" size = "40"><br><br>
-	
+
 				Email:<br/>
 				<input type="text" name="email" size = "40"><br><br>
-	
+
 				Telephone Number:<br/>
 				<input type="text" name="hp" placeholder="000-0000000" size = "40"><br><br>
-	
+
 				Address:<br/>
 				<input type="text" name="address" size = "40"><br><br>
 
 				Full Name:<br/>
 				<input type="text" name="fname" size = "40"><br><br>
-	
+
 				<input type="submit" name="create" value="create" style="height:30px;width:150px;font-size:14pt;"><br><br>
 			</form>
 			<script>
@@ -67,18 +67,18 @@
 				alert("Password must be at least 8 of length!");
 				return false;
 			}
-			else if (/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test(email)==false) 
+			else if (/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test(email)==false)
 			{
 				alert("Invalid Email Format!");
 				return false;
    			}
-			
-    		else if (/^\d{3}[-]\d{7}$/.test(hp)==false) 
+
+    		else if (/^\d{3}[-]\d{7}$/.test(hp)==false)
 			{
 				alert("Invalid Mobile Phone Format!");
 				return false;
     		}
-     		else if (address == null || address == "") 
+     		else if (address == null || address == "")
 	 		{
 				alert("Address cannot be empty!");
 				return false;

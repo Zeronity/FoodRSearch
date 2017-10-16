@@ -22,6 +22,7 @@
 				</ul>
 			</div>
 				<div class="row">
+				</br>
 					<div class="col-lg-4 col-md-4 col-xs-4"></div>
 				<div class="col-lg-4 col-md-4 col-xs-4">
 					<form action ="#" method="post">
@@ -32,10 +33,11 @@
 					</form>
 				</div>
 			</div>
-		</div>
+
 
 		<div class="jumbotron">
 			<?php
+					session_start();
 					if(isset($_POST['submit']))
 					{
 							$servername = "localhost";
@@ -62,12 +64,15 @@
 									$url=$row["url"];
 									echo "<tr>";
 									echo "<td>" . $count ."</td>";
-
 									echo "<td>" . $row["keyword"] . "</td>";
+<<<<<<< HEAD
 									echo "<td>" ."<a href =''$url'>".$row["url"] ."</a>" ."</td>";
 
 
 
+=======
+									echo "<td>" ."<a href ='$url'>".$row["url"] ."</a>" ."</td>";
+>>>>>>> 6fd9c84149375a9530ff215aa15035f7963595ce
 									echo "</tr>";
 									$count++;
 								}
@@ -82,6 +87,7 @@
 					}
 						?>
 		</div>
+	</div>
 
 
 
