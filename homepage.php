@@ -31,7 +31,7 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-xs-4"></div>
 				<div class="col-lg-4 col-md-4 col-xs-4">
-					<form action ="#" method="post">
+					<form action ="search.php" method="post">
 						<p>
 							<input type="text" name="Search" size="20" placeholder="find recipe " style="height:45px; font-size:16pt" >
 							<input type="submit" name="submit" value="Search">

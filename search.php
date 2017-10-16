@@ -64,7 +64,7 @@
 									echo "<td>" . $count ."</td>";
 
 									echo "<td>" . $row["keyword"] . "</td>";
-									echo "<td>" ."<a href =''$url'>"."$row["url"] ."</a>" ."</td>";
+									echo "<td>" ."<a href =''$url'>".$row["url"] ."</a>" ."</td>";
 
 
 
