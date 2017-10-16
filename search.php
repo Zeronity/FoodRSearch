@@ -65,14 +65,11 @@
 									echo "<tr>";
 									echo "<td>" . $count ."</td>";
 									echo "<td>" . $row["keyword"] . "</td>";
-<<<<<<< HEAD
 									echo "<td>" ."<a href =''$url'>".$row["url"] ."</a>" ."</td>";
 
 
 
-=======
 									echo "<td>" ."<a href ='$url'>".$row["url"] ."</a>" ."</td>";
->>>>>>> 6fd9c84149375a9530ff215aa15035f7963595ce
 									echo "</tr>";
 									$count++;
 								}
