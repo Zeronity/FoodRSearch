@@ -32,7 +32,7 @@
 			<div class="col-lg-4 col-md-4 col-xs-4">
 			</br>
 			<div class="jumbotron">
-			<form name="reportForm" action="reportform.php" onsubmit="return validateReportForm()"; method="post">
+			<form name="reportForm" action="makeReport.php" onsubmit="return validateReportForm()"; method="post">
 				Title:<br/>
 				<input type="text" name="title" class = "form-control"><br><br>
 
@@ -53,7 +53,7 @@
 	function validateReportForm() {
 		var title=document["reportForm"]["title"].value;
 		var recipeName=document["reportForm"]["recipeName"].value;
-		var description=document["reportForm"]["description"].value;
+		var description=document["reportForm"]["desc"].value;
 
 
 		if (title == null || title == "")

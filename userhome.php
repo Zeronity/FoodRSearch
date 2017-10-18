@@ -30,7 +30,7 @@
 					<a href="ownrecipe.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-tasks"></span>Recipes</button></p></a>
 				</div>
 				<div class="col-lg-1 col-md-1 col-xs-1">
-					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-list-alt"></span>Report</button></p></a>
+					<a href="reportform.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-list-alt"></span>Report</button></p></a>
 				</div>
 				<div class="col-lg-3 col-md-3 col-xs-3">
 					<a href="logout.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:180px"><span class="glyphicon glyphicon-user"></span><?php

@@ -11,7 +11,7 @@ $name=$_SESSION['username'];
 
 $title=$_POST['title'];
 $recipeName=$_POST['recipeName'];
-$description=$_POST['description'];
+$description=$_POST['desc'];
 
 
 
