@@ -18,13 +18,13 @@
 				<ul class="nav  nav-pills">
 					<li><a href="userhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="userrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="#"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="search.php"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
 			<div class="jumbotron">
-				<?php	
-								
+				<?php
+
 								$servername = "localhost";
 								$username = "root";
 								$password = "";
@@ -32,11 +32,11 @@
 								$con = new mysqli($servername, $username, $password, $dbname);
 
 								session_start();
-								$name=$_SESSION['username'];  
-								
+								$name=$_SESSION['username'];
+
 								$sql = "SELECT * from recipe where uploadedBy='$name'";
 								$result = mysqli_query($con, $sql);
-								
+
 								if (mysqli_num_rows($result) > 0)
 								{
 									$aList=array();
@@ -85,7 +85,7 @@
 											echo "<option>Others</option>";
 											echo "</select>";
 											echo "</td>";
-										}	
+										}
 										else {
 											echo "<td>";
 											echo "<select name='select$count'>";
@@ -107,7 +107,7 @@
 								{
 									echo "There are no any Recipe for Main Courses.";
 								}
-								
+
 								mysqli_close($con);
 							?>
 			</div>

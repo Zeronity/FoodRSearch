@@ -18,7 +18,7 @@
 				<ul class="nav  nav-pills">
 					<li><a href="userhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="userrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="#"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="search.php"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
@@ -34,17 +34,17 @@
 				</div>
 			</div>
 			<div class="jumbotron">
-				<?php	
-								
+				<?php
+
 								$servername = "localhost";
 								$username = "root";
 								$password = "";
 								$dbname = "foodrsearch";
 								$con = new mysqli($servername, $username, $password, $dbname);
-								
+
 								$sql = "SELECT * from recipe where RecipeType='Desserts'";
 								$result = mysqli_query($con, $sql);
-								
+
 								if (mysqli_num_rows($result) > 0)
 								{
 									$aList=array();
@@ -78,7 +78,7 @@
 								{
 									echo "There are no any Recipe for Desserts.";
 								}
-								
+
 								mysqli_close($con);
 							?>
 			</div>

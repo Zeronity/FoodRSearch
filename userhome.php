@@ -18,7 +18,7 @@
 				<ul class="nav  nav-pills">
 					<li><a href="userhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="userrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="#"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="search.php"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
@@ -33,9 +33,9 @@
 					<a href="#"><p><button type="button" class="btn btn-primary " style="height:45px ; width:90px"><span class="glyphicon glyphicon-list-alt"></span>Report</button></p></a>
 				</div>
 				<div class="col-lg-3 col-md-3 col-xs-3">
-					<a href="logout.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:180px"><span class="glyphicon glyphicon-user"></span><?php     
+					<a href="logout.php"><p><button type="button" class="btn btn-primary " style="height:45px ; width:180px"><span class="glyphicon glyphicon-user"></span><?php
 					session_start();
-					$name=$_SESSION['username'];     
+					$name=$_SESSION['username'];
 					echo'Logout ('. $name.')';
 					?></button></p></a>
 				</div>
@@ -66,27 +66,27 @@
 					<h2>Upload Recipe</h2>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:20px"></div>
 					<a href="#"><img src="upload.png" class="img-responsive" alt="Responsive" ></a>
-					
+
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:50px"></div>
 					<p>The FoodRSearch has a function which allow the users to upload their food recipe to the website. Inside the food recipe, the users can list down the
 						ingredients needed for that food recipe. Other than that, the users also can share the cooking techniques with the other peoples while using the specific
 						food recipe.
 					</p>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:140px"></div>
-					
+
 				</div>
 				<div class="col-lg-3 col-md-6 col-xs-12">
 					<h2>Make Report</h2>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:20px"></div>
 					<a href="#"><img src="report.gif" class="img-responsive" alt="Responsive" ></a>
-					
+
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:50px"></div>
 				    <p>
 				    	The FoodRSearch also provides function which allows the users to conduct a report based on the specific food recipe. This function will improved the quality of the food recipe sharing features. Any food recipes with wrong information will be removed after the investigation made by the customer support.
 
 					</p>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:160px"></div>
-					
+
 				</div>
 				<div class="col-lg-3 col-md-6 col-xs-12">
 					<h2>Learn Recipe</h2>
@@ -98,20 +98,20 @@
 				    	Other than that, the users can also conduct a discussion based on specific food recipes. The cooking techniques can be shared among the users.
 					</p>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:140px"></div>
-					
+
 				</div>
 				<div class="col-lg-3 col-md-6 col-xs-12">
 					<h2>Search Recipe</h2>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:20px"></div>
 					<a href="#"><img src="Search-icon.png" class="img-responsive" alt="Responsive" ></a>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:50px"></div>
-		
+
 					<p>
-						The FoodRSearch also provides a search function which allows the users to search the specific food recipes. The website will filter the user's 
+						The FoodRSearch also provides a search function which allows the users to search the specific food recipes. The website will filter the user's
 						options and produce a list of food recipes which matched the keywords entered by the user.
 					</p>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:40px"></div>
-					
+
 				</div>
 				<div class="col-lg-12 col-md-12 col-xs-12" style="height:60px"></div>
 			</div>
@@ -172,8 +172,8 @@
 							</a>
 						</div>
 					</p>
-					
-					
+
+
 				</div>
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px"></div>
@@ -182,7 +182,7 @@
 					<h4>WHAT PEOPLE SAY ABOUT US</h4>
 					<div class="col-lg-12 col-md-12 col-xs-12" style="height:20px"></div>
 						<div class="fotorama" data-autoplay="true" id="elm1">
-							<p>Hanzo 
+							<p>Hanzo
 								<br/><br/>
 								This website is quite good for me to find new recipe to learn.
 							</p>
@@ -205,12 +205,12 @@
 					<h4>LOCATE US</h4>
 					<br/>
 					<a href="https://www.google.com/maps/place/Putra+World+Trade+Centre/@3.1567167,101.6582296,14z/data=!4m15!1m9!4m8!1m0!1m6!1m2!1s0x31cc483db511d29d:0xbdff5f808f6fa427!2sPutra+World+Trade+Centre,+41,+Jalan+Tun+Ismail,+Kuala+Lumpur,+50480+Kuala+Lumpur,+Wilayah+Persekutuan+Kuala+Lumpur,+Malaysia!2m2!1d101.691789!2d3.168094!3m4!1s0x0:0xbdff5f808f6fa427!8m2!3d3.1680956!4d101.691792">
-					<p>FoodRSearch<br/>41, Jalan Tun Ismail, <br/>50480 Kuala Lumpur, Malaysia	
+					<p>FoodRSearch<br/>41, Jalan Tun Ismail, <br/>50480 Kuala Lumpur, Malaysia
 					</p>
 					</a>
 					<br/>
 					<p>Tel: +6 03 43942222<br/>Fax: +6 03 31956780</p>
-					
+
 				</div>
 		</div>
 		</div>

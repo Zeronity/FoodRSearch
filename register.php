@@ -28,7 +28,6 @@ $result = mysqli_query($con, $validate);
 		echo 'location.href="homepage.php";</script>';
 		mysqli_close($con);
 	}
-	
+
 }
 ?>
-
