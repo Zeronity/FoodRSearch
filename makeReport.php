@@ -22,5 +22,5 @@ $sql="INSERT INTO report(title, recipeName, description, status, madeBy) VALUES 
 		mysqli_close($con);
 	}
 
-}
+
 ?>
