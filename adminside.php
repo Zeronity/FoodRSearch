@@ -67,7 +67,13 @@
 										echo "<td>" . $row["RecipeName"] . "</td>";
 										echo "<td>" . $row["Ingredient"] . "</td>";
 										echo "<td>" . $row["Description"] . "</td>";
+										if($video!=""){
 										echo "<td>" . "<iframe width=\"300\" height=\"235\" src=\" $video \" allowfullscreen></iframe>" . "</td>";
+										}
+										else
+										{
+											echo "<td>" . "none of video"  . "</td>";
+										}
 										echo "<td>" . $row["rating"] . "</td>";
 										echo "<td>" . $row["comment"] . "</td>";
 										echo "</tr>";
