@@ -10,15 +10,15 @@
 <body>
 		<div class="wrapper">
 			<div class="header">
-				<a href="homepage.php"><img src="foodbanner.png" class="img-responsive img-wrapper" alt="Responsive"></a>
+				<a href="userhome.php"><img src="foodbanner.png" class="img-responsive img-wrapper" alt="Responsive"></a>
 			</div>
 		</div>
 		<div class="container">
 			<div id="nav">
 				<ul class="nav  nav-pills">
-					<li><a href="homepage.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="recipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="search.php"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="userhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="userrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="usersearch.php"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
 				<div class="row">
