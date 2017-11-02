@@ -20,7 +20,7 @@ if($name !=''&& $pwd !='')
 	{
 		$_SESSION['username']=$name;
 		echo '<script type="text/javascript">alert("You have login successfully!");';
-		header('location:adminhome.php');
+		echo 'location.href="adminhome.php";</script>';
 
 	}
 	

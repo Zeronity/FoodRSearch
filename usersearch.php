@@ -25,12 +25,22 @@
 				</br>
 					<div class="col-lg-4 col-md-4 col-xs-4"></div>
 				<div class="col-lg-4 col-md-4 col-xs-4">
-					<form action ="#" method="post">
+					<form name="myForm" action ="usersearch.php" onsubmit="return validate()"; method="post">
 						<p>
 							<input type="text" name="Search" size="20" placeholder="search recipe " style="height:45px; font-size:16pt" >
 							<input type="submit" name="submit" value="Search">
 						</p>
 					</form>
+					<script>
+			function validate() {
+				var search=document["myForm"]["Search"].value;
+
+    		if (search == null || search == "")
+			{
+        		alert("Keyword cannot be empty!");
+        		return false;
+    		}}
+			</script>
 				</div>
 			</div>
 
@@ -46,7 +56,7 @@
 							$dbname = "foodrsearch";
 							$con = new mysqli($servername, $username, $password, $dbname);
 
-							$search=$_POST['Search'];
+							$search= strtolower($_POST['Search']);
 							$sql = "SELECT * from search where keyword='$search'";
 							$result = mysqli_query($con, $sql);
 
@@ -57,19 +67,13 @@
 								echo "<tr>";
 								echo "<th>No.</th>";
 								echo "<th>" . "Result" . "</th>";
-								echo "<th>" . "Url" . "</th>";
 								echo "</tr>";
 								while($row = mysqli_fetch_assoc($result))
 								{
 									$url=$row["url"];
 									echo "<tr>";
 									echo "<td>" . $count ."</td>";
-									echo "<td>" . $row["keyword"] . "</td>";
-									echo "<td>" ."<a href =''$url'>".$row["url"] ."</a>" ."</td>";
-
-
-
-									echo "<td>" ."<a href ='$url'>".$row["url"] ."</a>" ."</td>";
+									echo "<td>" ."<a href =''$url'>".$row["recipe"] ."</a>" ."</td>";
 									echo "</tr>";
 									$count++;
 								}
@@ -77,7 +81,7 @@
 							}
 							else
 							{
-								echo "There are no any result for these keyowrds.";
+								echo "There are no any result for these keywords.";
 							}
 
 							mysqli_close($con);

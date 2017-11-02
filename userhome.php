@@ -18,7 +18,7 @@
 				<ul class="nav  nav-pills">
 					<li><a href="userhome.php"><img src="home.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 					<li><a href="userrecipe.php"><img src="recipe.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
-					<li><a href="search.php"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
+					<li><a href="usersearch.php"><img src="search.png" class="img-responsive img-wrapper" alt="Responsive"></a></li>
 				</ul>
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:30px" ></div>
@@ -41,12 +41,22 @@
 				</div>
 				<div class="col-lg-2 col-md-2 col-xs-2"></div>
 				<div class="col-lg-4 col-md-4 col-xs-4">
-					<form action ="#" method="post">
+					<form name="myForm" action ="usersearch.php" onsubmit="return validate()"; method="post">
 						<p>
 							<input type="text" name="Search" size="20" placeholder="find recipe " style="height:45px; font-size:16pt" >
 							<input type="submit" name="submit" value="Search">
 						</p>
 					</form>
+					<script>
+			function validate() {
+				var search=document["myForm"]["Search"].value;
+
+    		if (search == null || search == "")
+			{
+        		alert("Keyword cannot be empty!");
+        		return false;
+    		}}
+			</script>
 				</div>
 			</div>
 			<div class="fotorama" >

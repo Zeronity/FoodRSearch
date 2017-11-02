@@ -84,7 +84,6 @@
 											echo "<td>";
 											echo "<select name='select$count'>";
 											echo "<option>investigating</option>";
-											echo "<option>pending</option>";
 											echo "<option>complete</option>";
 											echo "</select>";
 											echo "</td>";
@@ -93,8 +92,6 @@
 											echo "<td>";
 											echo "<select name='select$count'>";
 											echo "<option>complete</option>";
-											echo "<option>pending</option>";
-											echo "<option>investigating</option>";
 											echo "</select>";
 											echo "</td>";
 										}

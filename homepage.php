@@ -31,12 +31,22 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-xs-4"></div>
 				<div class="col-lg-4 col-md-4 col-xs-4">
-					<form action ="search.php" method="post">
+					<form name="myForm" action ="search.php" onsubmit="return validate()"; method="post">
 						<p>
 							<input type="text" name="Search" size="20" placeholder="find recipe " style="height:45px; font-size:16pt" >
 							<input type="submit" name="submit" value="Search">
 						</p>
 					</form>
+					<script>
+			function validate() {
+				var search=document["myForm"]["Search"].value;
+
+    		if (search == null || search == "")
+			{
+        		alert("Keyword cannot be empty!");
+        		return false;
+    		}}
+			</script>
 				</div>
 			</div>
 
