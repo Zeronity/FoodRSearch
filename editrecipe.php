@@ -55,9 +55,12 @@
 										array_push($aList,$row["RecipeID"]);
 										$video=$row["videoURL"];
 										$name=$row["RecipeName"];
+										$ingd=$row["Ingredient"];
+										$desc=$row["Description"];
+										$recipeType=$row["RecipeType"];
 										echo "<tr>";
 										echo "<td>" . $row["RecipeID"] . "</td>";
-										echo "<form name='myForm' action='upload.php' onsubmit='return validate()'; method='post'>";
+										echo "<form name='myForm' action='updateRecipe.php' onsubmit='return validate()'; method='post'>";
 										echo "<td>" . "<input type='text' name='rname' size = '15' value='$name'>" . "</td>";
 										if ($row["RecipeType"]=='Main Courses'){
 											echo "<td>";
@@ -99,12 +102,13 @@
 											echo "</select>";
 											echo "</td>";
 										}
-										echo "<td>" . $row["Ingredient"] . "</td>";
-										echo "<td>" . $row["Description"] . "</td>";
-										echo "<td>" . $row["videoURL"] . "</td>";
+										echo "<td>" . "<textarea rows='5' cols='35' name='ingredient' value='$ingd'>$ingd</textarea>" . "</td>";
+										echo "<td>" . "<textarea rows='5' cols='35' name='description' value='$desc'>$desc</textarea>" . "</td>";
+										echo "<td>" . "<input type='text' name='videoURL' size = '18' value='$video'>" . "</td>";
 										echo "</tr>";
 									}
 									echo "</table>";
+									echo "<input type='submit' name='Update' value='Update' style='height:30px;width:150px;font-size:14pt;'>";
 								}
 								else
 								{
