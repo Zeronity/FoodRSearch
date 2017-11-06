@@ -39,6 +39,7 @@
 
 								if (mysqli_num_rows($result) > 0)
 								{
+
 									$aList=array();
 									echo "<table class='table table-responsive'><h4>Main Courses</h4>";
 									echo "<tr>";
@@ -53,12 +54,14 @@
 									{
 										array_push($aList,$row["RecipeID"]);
 										$video=$row["videoURL"];
+										$name=$row["RecipeName"];
 										echo "<tr>";
 										echo "<td>" . $row["RecipeID"] . "</td>";
-										echo "<td>" . $row["RecipeName"] . "</td>";
+										echo "<form name='myForm' action='upload.php' onsubmit='return validate()'; method='post'>";
+										echo "<td>" . "<input type='text' name='rname' size = '15' value='$name'>" . "</td>";
 										if ($row["RecipeType"]=='Main Courses'){
 											echo "<td>";
-											echo "<select name='select$count'>";
+											echo "<select name='rtype'>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Desserts</option>";
 											echo "<option>complete</option>";
@@ -68,7 +71,7 @@
 										}
 										else if ($row["RecipeType"]=='Desserts'){
 											echo "<td>";
-											echo "<select name='select$count'>";
+											echo "<select name='rtype'>";
 											echo "<option>Desserts</option>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Side Dishes</option>";
@@ -78,7 +81,7 @@
 										}
 										else if ($row["RecipeType"]=='Side Dishes'){
 											echo "<td>";
-											echo "<select name='select$count'>";
+											echo "<select name='rtype'>";
 											echo "<option>Side Dishes</option>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Desserts</option>";
@@ -88,7 +91,7 @@
 										}
 										else {
 											echo "<td>";
-											echo "<select name='select$count'>";
+											echo "<select name='rtype'>";
 											echo "<option>Others</option>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Desserts</option>";
