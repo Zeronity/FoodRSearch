@@ -39,8 +39,8 @@
 
 								if (mysqli_num_rows($result) > 0)
 								{
-
-									$aList=array();
+									$count = 1;
+									$rList=array();
 									echo "<table class='table table-responsive'><h4>Main Courses</h4>";
 									echo "<tr>";
 									echo "<th>No.</th>";
@@ -52,7 +52,7 @@
 									echo "</tr>";
 									while($row = mysqli_fetch_assoc($result))
 									{
-										array_push($aList,$row["RecipeID"]);
+										array_push($rList,$row["RecipeID"]);
 										$video=$row["videoURL"];
 										$name=$row["RecipeName"];
 										$ingd=$row["Ingredient"];
@@ -61,10 +61,10 @@
 										echo "<tr>";
 										echo "<td>" . $row["RecipeID"] . "</td>";
 										echo "<form name='myForm' action='updateRecipe.php' onsubmit='return validate()'; method='post'>";
-										echo "<td>" . "<input type='text' name='rname' size = '15' value='$name'>" . "</td>";
+										echo "<td>" . "<input type='text' name='rname$count' size = '15' value='$name'>" . "</td>";
 										if ($row["RecipeType"]=='Main Courses'){
 											echo "<td>";
-											echo "<select name='rtype'>";
+											echo "<select name='select$count'>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Desserts</option>";
 											echo "<option>complete</option>";
@@ -74,7 +74,7 @@
 										}
 										else if ($row["RecipeType"]=='Desserts'){
 											echo "<td>";
-											echo "<select name='rtype'>";
+											echo "<select name='select$count'>";
 											echo "<option>Desserts</option>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Side Dishes</option>";
@@ -84,7 +84,7 @@
 										}
 										else if ($row["RecipeType"]=='Side Dishes'){
 											echo "<td>";
-											echo "<select name='rtype'>";
+											echo "<select name='select$count'>";
 											echo "<option>Side Dishes</option>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Desserts</option>";
@@ -94,7 +94,7 @@
 										}
 										else {
 											echo "<td>";
-											echo "<select name='rtype'>";
+											echo "<select name='select$count'>";
 											echo "<option>Others</option>";
 											echo "<option>Main Courses</option>";
 											echo "<option>Desserts</option>";
@@ -102,13 +102,16 @@
 											echo "</select>";
 											echo "</td>";
 										}
-										echo "<td>" . "<textarea rows='5' cols='35' name='ingredient' value='$ingd'>$ingd</textarea>" . "</td>";
-										echo "<td>" . "<textarea rows='5' cols='35' name='description' value='$desc'>$desc</textarea>" . "</td>";
-										echo "<td>" . "<input type='text' name='videoURL' size = '18' value='$video'>" . "</td>";
+										echo "<td>" . "<textarea rows='5' cols='35' name='ingredient$count' value='$ingd'>$ingd</textarea>" . "</td>";
+										echo "<td>" . "<textarea rows='5' cols='35' name='description$count' value='$desc'>$desc</textarea>" . "</td>";
+										echo "<td>" . "<input type='text' name='videoURL$count' size = '18' value='$video'>" . "</td>";
 										echo "</tr>";
+										$count++;
 									}
 									echo "</table>";
 									echo "<input type='submit' name='Update' value='Update' style='height:30px;width:150px;font-size:14pt;'>";
+									echo "</form></br>";
+									$_SESSION['RecipeID']=$rList;
 								}
 								else
 								{

@@ -1,31 +1,36 @@
 <?php
-{
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="foodrsearch";
-$con= new mysqli($servername, $username, $password, $dbname);
+	session_start();
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "foodrsearch";
+	$con = new mysqli($servername, $username, $password, $dbname);
+	
 
-session_start();
-$name=$_SESSION['username'];
+	if(isset($_POST['Update']))
+	{
+		
+		$f = count($_SESSION['RecipeID']);
+		for ($i=0;$i<$f;$i++){
+			$n=$i+1;
+			$recipeType=$_POST["select$n"];
+			$name=$_POST["rname$n"];
+			$ingd=$_POST["ingredient$n"];
+			$desc=$_POST["description$n"];
+			$video=$_POST["videoURL$n"];
+			$id=$_SESSION["RecipeID"][$i];
+			$sql = "UPDATE recipe SET RecipeType='$recipeType', RecipeName='$name', Ingredient='$ingd', Description='$desc', videoURL='$video' WHERE RecipeID='$id'";
+			mysqli_query($con, $sql);
+			}
+			
+		}
+		
+		echo '<script type="text/javascript">alert("You have update the recipe successfully!");';
+		echo 'location.href="ownrecipe.php";</script>';
 
-$recipeType=$_POST["RecipeType"];
-$video=$_POST["videoURL"];
-$name=$_POST["RecipeName"];
-$ingd=$_POST["Ingredient"];
-$desc=$_POST["Description"];
-$recipeID=$row['RecipeID'];
-
-
-
-
-
-$sql = "UPDATE recipe SET RecipeType='$recipeType', RecipeName='$name', Ingredient='$ingd', Description='$desc', videoURL='$video' WHERE RecipeID='$recipeID'  ;
-		mysqli_query($con, $sql);
-		echo "<script type='text/javascript'>alert('You have update the recipe successfully!');";
-		echo "location.href='userhome.php';</script>";
-		mysqli_close($con);
-	}
-
+	
+	
+	
+	mysqli_close($con);
 
 ?>
