@@ -23,8 +23,8 @@
 			</div>
 			<div class="col-lg-12 col-md-12 col-xs-12" style="height:40px" ></div>
 			<div class="jumbotron">
-				<?php	
-								
+				<?php
+
 								$servername = "localhost";
 								$username = "root";
 								$password = "";
@@ -32,14 +32,15 @@
 								$con = new mysqli($servername, $username, $password, $dbname);
 
 								session_start();
-								$name=$_SESSION['username'];  
-								
+								$name=$_SESSION['username'];
+
 								$sql = "SELECT * from recipe where uploadedBy='$name'";
 								$result = mysqli_query($con, $sql);
-								
+
 								if (mysqli_num_rows($result) > 0)
 								{
 									$aList=array();
+									$count=1;
 									echo "<form method='post' action='delete.php'>";
 									echo "<table class='table table-responsive'><h4>Your Recipes</h4>";
 									echo "<tr>";
@@ -62,18 +63,20 @@
 										echo "<td>" . $row["Ingredient"] . "</td>";
 										echo "<td>" . $row["Description"] . "</td>";
 										echo "<td>" . $row["videoURL"] . "</td>";
-										echo "<td>" ."<input type='submit' name='submit' class='btn btn-success btn-lg' value='Delete' >". "</td>";
+										echo "<td>" ."<input type='submit' name='delete$count' class='btn btn-success btn-lg' value='Delete' >". "</td>";
 										echo "</tr>";
 									}
 									echo "</table>";
 									echo "<a href=\"editrecipe.php\"><p><button type=\"button\" class=\"btn btn-primary \" style=\"height:45px ; width:90px\" >Edit</button></p></a>";
 									echo "</form></br>";
+									$count ++;
+									$_SESSION['RecipeID']=$aList;
 								}
 								else
 								{
 									echo "You haven't upload any recipe.";
 								}
-								
+
 								mysqli_close($con);
 							?>
 			</div>
