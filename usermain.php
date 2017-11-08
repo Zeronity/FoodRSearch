@@ -83,7 +83,7 @@
 										echo "<form name='myForm' action='ratencomment.php' onsubmit='return validate()'; method='post'>";
 											if($row["rating"]==''){
 											echo "<td>";
-											echo "<select rating='select$count'>";
+											echo "<select name='select$count'>";
 											echo "<option></option>";
 											echo "<option>1 star</option>";
 											echo "<option>2 stars</option>";
@@ -95,7 +95,7 @@
 										}
 										else if($row["rating"]=='1 star'){
 										echo "<td>";
-										echo "<select rating='select$count'>";
+										echo "<select name='select$count'>";
 										echo "<option></option>";
 										echo "<option>1 star</option>";
 										echo "<option>2 stars</option>";
@@ -107,7 +107,7 @@
 										}
 										else if($row["rating"]=='2 stars'){
 										echo "<td>";
-										echo "<select rating='select$count'>";
+										echo "<select name='select$count'>";
 										echo "<option></option>";
 										echo "<option>1 star</option>";
 										echo "<option>2 stars</option>";
@@ -119,7 +119,7 @@
 										}
 										else if($row["rating"]=='3 stars'){
 										echo "<td>";
-										echo "<select rating='select$count'>";
+										echo "<select name='select$count'>";
 										echo "<option></option>";
 										echo "<option>1 star</option>";
 										echo "<option>2 stars</option>";
@@ -131,7 +131,7 @@
 										}
 										else if($row["rating"]=='4 stars'){
 										echo "<td>";
-										echo "<select rating='select$count'>";
+										echo "<select name='select$count'>";
 										echo "<option></option>";
 										echo "<option>1 star</option>";
 										echo "<option>2 stars</option>";
@@ -143,7 +143,7 @@
 										}
 										else if($row["rating"]=='5 Stars'){
 										echo "<td>";
-										echo "<select rating='select$count'>";
+										echo "<select name='select$count'>";
 										echo "<option></option>";
 										echo "<option>1 star</option>";
 										echo "<option>2 stars</option>";
@@ -155,7 +155,7 @@
 										}
 										else {
 											echo "<td>";
-											echo "<select rating='select$count'>";
+											echo "<select name='select$count'>";
 											echo "<option></option>";
 											echo "<option>1 star</option>";
 											echo "<option>2 stars</option>";
