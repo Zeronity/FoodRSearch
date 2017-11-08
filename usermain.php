@@ -42,6 +42,7 @@
 								$dbname = "foodrsearch";
 								$con = new mysqli($servername, $username, $password, $dbname);
 
+								session_start();
 								$sql = "SELECT * from recipe where RecipeType='Main Courses'";
 								$result = mysqli_query($con, $sql);
 
