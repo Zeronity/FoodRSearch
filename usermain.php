@@ -51,6 +51,8 @@
 								{
 									$count=1;
 									$aList=array();
+									$cList=array();
+									$rList=array();
 									echo "<table class='table table-responsive'><h4>Main Courses</h4>";
 									echo "<tr>";
 									echo "<th>No.</th>";
@@ -66,6 +68,8 @@
 										array_push($aList,$row["RecipeID"]);
 										$rating=$row["rating"];
 										$comment=$row["comment"];
+										array_push($cList,$row["comment"]);
+										array_push($rList,$row["rating"]);
 										$video=$row["videoURL"];
 										echo "<tr>";
 										echo "<td>" . $row["RecipeID"] . "</td>";
@@ -81,95 +85,25 @@
 										}
 
 
-										echo "<form name='myForm' action='ratencomment.php' onsubmit='return validate()'; method='post'>";
-											if($row["rating"]==''){
+										echo "<form name='myForm' action='ratencomment.php' ; method='post'>";
+											
 											echo "<td>";
+											echo "$rating";
 											echo "<select name='select$count'>";
-											echo "<option></option>";
-											echo "<option>1 star</option>";
-											echo "<option>2 stars</option>";
-											echo "<option>3 stars</option>";
-											echo "<option>4 stars</option>";
-											echo "<option>5 stars</option>";
+											echo "<option value='0'></option>";
+											echo "<option value='1'>1 star</option>";
+											echo "<option value='2'>2 stars</option>";
+											echo "<option value='3'>3 stars</option>";
+											echo "<option value='4'>4 stars</option>";
+											echo "<option value='5'>5 stars</option>";
 											echo "</select>";
 											echo "</td>";
-										}
-										else if($row["rating"]=='1 star'){
-										echo "<td>";
-										echo "<select name='select$count'>";
-										echo "<option></option>";
-										echo "<option>1 star</option>";
-										echo "<option>2 stars</option>";
-										echo "<option>3 stars</option>";
-										echo "<option>4 stars</option>";
-										echo "<option>5 stars</option>";
-										echo "</select>";
-										echo "</td>";
-										}
-										else if($row["rating"]=='2 stars'){
-										echo "<td>";
-										echo "<select name='select$count'>";
-										echo "<option></option>";
-										echo "<option>1 star</option>";
-										echo "<option>2 stars</option>";
-										echo "<option>3 stars</option>";
-										echo "<option>4 stars</option>";
-										echo "<option>5 stars</option>";
-										echo "</select>";
-										echo "</td>";
-										}
-										else if($row["rating"]=='3 stars'){
-										echo "<td>";
-										echo "<select name='select$count'>";
-										echo "<option></option>";
-										echo "<option>1 star</option>";
-										echo "<option>2 stars</option>";
-										echo "<option>3 stars</option>";
-										echo "<option>4 stars</option>";
-										echo "<option>5 stars</option>";
-										echo "</select>";
-										echo "</td>";
-										}
-										else if($row["rating"]=='4 stars'){
-										echo "<td>";
-										echo "<select name='select$count'>";
-										echo "<option></option>";
-										echo "<option>1 star</option>";
-										echo "<option>2 stars</option>";
-										echo "<option>3 stars</option>";
-										echo "<option>4 stars</option>";
-										echo "<option>5 stars</option>";
-										echo "</select>";
-										echo "</td>";
-										}
-										else if($row["rating"]=='5 Stars'){
-										echo "<td>";
-										echo "<select name='select$count'>";
-										echo "<option></option>";
-										echo "<option>1 star</option>";
-										echo "<option>2 stars</option>";
-										echo "<option>3 stars</option>";
-										echo "<option>4 stars</option>";
-										echo "<option>5 stars</option>";
-										echo "</select>";
-										echo "</td>";
-										}
-										else {
-											echo "<td>";
-											echo "<select name='select$count'>";
-											echo "<option></option>";
-											echo "<option>1 star</option>";
-											echo "<option>2 stars</option>";
-											echo "<option>3 stars</option>";
-											echo "<option>4 stars</option>";
-											echo "<option>5 stars</option>";
-											echo "</select>";
+										
+									
+											echo "<td>" ;
+											echo "$comment";
+											echo "<textarea rows='5' cols='35' name='comment$count'></textarea>";
 											echo "</td>";
-
-										}
-
-
-										echo "<td>" . "<textarea rows='5' cols='35' name='comment$count' value='$comment'>$comment</textarea>" . "</td>";
 
 										echo "</tr>";
 										$count++;
@@ -178,6 +112,8 @@
 									echo "<input type='submit' name='RateNComment' value='Rate & Comment' style='height:30px;width:170px;font-size:14pt;'>";
 									echo "</form></br>";
 									$_SESSION['RecipeID']=$aList;
+									$_SESSION['comment']=$cList;
+									$_SESSION['rating']=$rList;
 								}
 								else
 								{
