@@ -44,10 +44,11 @@
 
 								$sql = "SELECT * from recipe where RecipeType='Main Courses'";
 								$result = mysqli_query($con, $sql);
-								
+
 
 								if (mysqli_num_rows($result) > 0)
 								{
+									$count=1;
 									$aList=array();
 									echo "<table class='table table-responsive'><h4>Main Courses</h4>";
 									echo "<tr>";
@@ -62,6 +63,8 @@
 									while($row = mysqli_fetch_assoc($result))
 									{
 										array_push($aList,$row["RecipeID"]);
+										$rating=$row["rating"];
+										$comment=$row["comment"];
 										$video=$row["videoURL"];
 										echo "<tr>";
 										echo "<td>" . $row["RecipeID"] . "</td>";
@@ -78,9 +81,10 @@
 
 										echo "<td>" . $row["rating"] . "</td>";
 
-										echo "<td>" . $row["comment"] . "</td>";
+										echo "<td>" . "<textarea rows='5' cols='35' name='comment$count' value='$comment'>$comment</textarea>" . "</td>";
 
 										echo "</tr>";
+										$count++;
 									}
 									echo "</table>";
 								}
