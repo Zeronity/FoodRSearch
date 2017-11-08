@@ -60,7 +60,7 @@
 										$recipeType=$row["RecipeType"];
 										echo "<tr>";
 										echo "<td>" . $row["RecipeID"] . "</td>";
-										echo "<form name='myForm' action='updateRecipe.php' onsubmit='return validate()'; method='post'>";
+										echo "<form name='myForm' action='updateRecipe.php';  method='post'>";
 										echo "<td>" . "<input type='text' name='rname$count' size = '15' value='$name'>" . "</td>";
 										if ($row["RecipeType"]=='Main Courses'){
 											echo "<td>";
@@ -120,6 +120,7 @@
 
 								mysqli_close($con);
 							?>
+
 			</div>
 
 		</div>
