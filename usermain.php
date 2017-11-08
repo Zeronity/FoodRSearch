@@ -44,6 +44,7 @@
 
 								$sql = "SELECT * from recipe where RecipeType='Main Courses'";
 								$result = mysqli_query($con, $sql);
+								
 
 								if (mysqli_num_rows($result) > 0)
 								{
@@ -74,8 +75,11 @@
 										{
 											echo "<td>" . "none of video"  . "</td>";
 										}
+
 										echo "<td>" . $row["rating"] . "</td>";
+
 										echo "<td>" . $row["comment"] . "</td>";
+
 										echo "</tr>";
 									}
 									echo "</table>";
