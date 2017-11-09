@@ -42,12 +42,17 @@
 								$dbname = "foodrsearch";
 								$con = new mysqli($servername, $username, $password, $dbname);
 
+								session_start();
 								$sql = "SELECT * from recipe where RecipeType='Others'";
 								$result = mysqli_query($con, $sql);
 
+
 								if (mysqli_num_rows($result) > 0)
 								{
+									$count=1;
 									$aList=array();
+									$cList=array();
+									$rList=array();
 									echo "<table class='table table-responsive'><h4>Others</h4>";
 									echo "<tr>";
 									echo "<th>No.</th>";
@@ -61,6 +66,10 @@
 									while($row = mysqli_fetch_assoc($result))
 									{
 										array_push($aList,$row["RecipeID"]);
+										$rating=$row["rating"];
+										$comment=$row["comment"];
+										array_push($cList,$row["comment"]);
+										array_push($rList,$row["rating"]);
 										$video=$row["videoURL"];
 										echo "<tr>";
 										echo "<td>" . $row["RecipeID"] . "</td>";
@@ -74,15 +83,41 @@
 										{
 											echo "<td>" . "none of video"  . "</td>";
 										}
-										echo "<td>" . $row["rating"] . "</td>";
-										echo "<td>" . $row["comment"] . "</td>";
+
+
+										echo "<form name='myForm' action='ratencomment.php' ; method='post'>";
+											
+											echo "<td>";
+											echo "$rating";
+											echo "<select name='select$count'>";
+											echo "<option value='0'></option>";
+											echo "<option value='1'>1 star</option>";
+											echo "<option value='2'>2 stars</option>";
+											echo "<option value='3'>3 stars</option>";
+											echo "<option value='4'>4 stars</option>";
+											echo "<option value='5'>5 stars</option>";
+											echo "</select>";
+											echo "</td>";
+										
+									
+											echo "<td>" ;
+											echo "$comment";
+											echo "<textarea rows='5' cols='35' name='comment$count'></textarea>";
+											echo "</td>";
+
 										echo "</tr>";
+										$count++;
 									}
 									echo "</table>";
+									echo "<input type='submit' name='RateNComment' value='Rate & Comment' style='height:30px;width:170px;font-size:14pt;'>";
+									echo "</form></br>";
+									$_SESSION['RecipeID']=$aList;
+									$_SESSION['comment']=$cList;
+									$_SESSION['rating']=$rList;
 								}
 								else
 								{
-									echo "There are no any Recipe for Others.";
+									echo "There are no any Recipe for Main Courses.";
 								}
 
 								mysqli_close($con);
